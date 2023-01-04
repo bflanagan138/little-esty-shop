@@ -7,4 +7,8 @@ class Invoice < ApplicationRecord
   enum status: {cancelled: 0,
                 completed: 1,
                 in_progress: 2}
+
+  def format_date_long
+    self.created_at.to_formatted_s(:admin_invoice_date)
+  end
 end
