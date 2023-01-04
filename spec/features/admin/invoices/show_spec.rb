@@ -20,7 +20,7 @@ RSpec.describe 'the admin show page' do
 
       expect(page).to have_content(@invoice_1.id)
       expect(page).to have_content(@invoice_1.status)
-      expect(page).to have_content(@invoice_1.created_at)
+      expect(page).to have_content(@invoice_1.created_at.to_formatted_s(:admin_invoice_date))
       expect(page).to have_content(@invoice_1.customer.first_name)
       expect(page).to have_content(@invoice_1.customer.last_name)
     end
