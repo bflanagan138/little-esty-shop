@@ -17,4 +17,8 @@
     
     <%= yield %>
   </body>
+
+  <footer>
+    <%= "Merged Commits: #{$github_api.pr_count}" %>
+  </footer>
 </html>
