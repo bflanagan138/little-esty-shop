@@ -11,4 +11,6 @@ require './poros/user_name_search.rb'
 require './poros/user_name.rb'
 
 commit_search  = CommitSearch.new
-@commits_count = commit_search.commit_information
+datas = commit_search.commit_information
+
+@commit_count = datas[0][1][0][-15..-13].to_i

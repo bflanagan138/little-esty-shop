@@ -1,15 +1,15 @@
 class GithubService
   
   def content(url)
-    parse(url)
-  end
-
-  def parse(url)
-    JSON.parse(response(url).body, symbolize_names: true)
+    response(url).headers
   end
 
   def response(url)
-    HTTParty.get(url)
+    HTTParty.get(
+      url,
+      include: true,
+      headers: { "Accept" => "application/vnd.github+json" }
+    )
   end
-  
+
 end

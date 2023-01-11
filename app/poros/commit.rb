@@ -1,13 +1,11 @@
 class Commit
   
-  attr_reader :count
-
   def initialize(data)
-    @commits << data[:commit]
+    @commits = data
   end
 
-  def count
-    @commits.length
+  def commit_count
+    @commits[1][0][-15..-13].to_i
   end
 
 end
