@@ -13,11 +13,10 @@ class Commit
   end
 
   def parsed_count
-    while JSON.parse(response.body, symbolize_names: true).count != 0 do
+    while @page_idx != 5 do
       @commits_count += JSON.parse(response.body, symbolize_names: true).count
       @page_idx += 1
     end
     @commits_count
   end
-
 end
