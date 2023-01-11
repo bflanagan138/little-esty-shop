@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= "Github Repo Name: #{RepoName.new.name_parsed}" %>
   </head>
 
   <body>
@@ -20,4 +21,5 @@
     <%= "Merged Commits: #{GithubService.github_api_pr}" %>
     <div id="github_total_commits"><%= "Total Commits: #{GithubService.github_api_tc}" %></div>
   </footer>
+ 
 </html>
