@@ -3,7 +3,7 @@ require 'json'
 require 'pry'
 require_relative './commit.rb'
 require_relative './pull_request.rb'
-# require_relative './repo_name_search.rb'
+require_relative './repo_name_search.rb'
 # require_relative './repo_name.rb'
 # require_relative './user_name_search.rb'
 # require_relative './user_name.rb'
@@ -16,6 +16,10 @@ class GithubService
 
   def self.github_api_tc
     Commit.new.parsed_count
+  end
+
+  def self.github_user_names
+    UserNameSearch.new.github_user_names
   end
 
 end
