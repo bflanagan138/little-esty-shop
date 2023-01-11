@@ -1,11 +1,21 @@
 require 'httparty'
 require 'json'
 require 'pry'
-require './poros/commit_search.rb'
-require './poros/commit.rb'
-require './poros/pull_request_search.rb'
-require './poros/pull_request.rb'
-require './poros/repo_name_search.rb'
-require './poros/repo_name.rb'
-require './poros/user_name_search.rb'
-require './poros/user_name.rb'
+# # require_relative './commit_search.rb'
+# require_relative './commit.rb'
+# require_relative './pull_request_search.rb'
+require_relative './pull_request.rb'
+# require_relative './repo_name_search.rb'
+# require_relative './repo_name.rb'
+# require_relative './user_name_search.rb'
+# require_relative './user_name.rb'
+
+class Github
+  attr_reader :pr_count
+
+  def initialize
+    @pr_count = PullRequest.new.parsed.count
+
+  end
+
+end
