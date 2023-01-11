@@ -13,12 +13,11 @@
     <%= flash[:alert] %>
     <%= flash[:notice] %>
 
-    <div id="github_commits">Github Commits Made: <%= @commits_count %></div>
-    
     <%= yield %>
   </body>
 
   <footer>
     <%= "Merged Commits: #{$github_api.pr_count}" %>
+    <div id="github_total_commits"><%= "Total Commits: #{$github_api.tc_count}" %></div>
   </footer>
 </html>
