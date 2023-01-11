@@ -16,7 +16,7 @@ class Github
 
   def initialize
     @pr_count = PullRequest.new.parsed.count
-    @tc_count = Commit.new.parsed.count
+    @tc_count = Commit.new.parsed_count
   end
 
 end

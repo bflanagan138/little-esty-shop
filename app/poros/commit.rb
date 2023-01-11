@@ -2,15 +2,22 @@ require 'httparty'
 require 'json'
 
 class Commit
-  
-  COMMIT_URL = "https://api.github.com/repos/bflanagan138/little-esty-shop/commits?&per_page=500"
-  
-  def response
-    HTTParty.get(COMMIT_URL)
+
+  def initialize
+    @commits_count = 0
+    @page_idx = 1
   end
 
-  def parsed
-    JSON.parse(response.body, symbolize_names: true)
+  def response
+    HTTParty.get("https://api.github.com/repos/bGray88/m2_relational_rails_dir-mov/commits?&per_page=500&page=#{@page_idx}")
+  end
+
+  def parsed_count
+    while JSON.parse(response.body, symbolize_names: true).count != 0 do
+      @commits_count += JSON.parse(response.body, symbolize_names: true).count
+      @page_idx += 1
+    end
+    @commits_count
   end
 
 end
