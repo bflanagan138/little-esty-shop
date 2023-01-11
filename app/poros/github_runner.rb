@@ -9,3 +9,6 @@ require './poros/repo_name_search.rb'
 require './poros/repo_name.rb'
 require './poros/user_name_search.rb'
 require './poros/user_name.rb'
+
+commit_search  = CommitSearch.new
+@commits_count = commit_search.commit_information
