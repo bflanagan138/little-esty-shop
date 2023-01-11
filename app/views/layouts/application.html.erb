@@ -19,7 +19,12 @@
 
   <footer>
     <%= "Merged Commits: #{GithubService.github_api_pr}" %>
-    <div id="github_total_commits"><%= "Total Commits: #{GithubService.github_api_tc}" %></div>
+    <div id="github_commits">
+      <%= "Brady Commits: #{GithubService.github_api_tc[:brady]}" %>
+      <%= "Brandon Commits: #{GithubService.github_api_tc[:brandon]}" %>
+      <%= "Bryan Commits: #{GithubService.github_api_tc[:bryan]}" %>
+      <%= "Sergio Commits: #{GithubService.github_api_tc[:sergio]}" %>
+    </div>
   </footer>
  
 </html>
