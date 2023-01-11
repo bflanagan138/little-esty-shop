@@ -1,15 +1,14 @@
 require 'httparty'
 require 'json'
+require 'pry'
 
 class RepoName
   
-  def github_response
+  def github
     HTTParty.get("https://api.github.com/repos/bflanagan138/little-esty-shop")
-   
   end
   
   def name_parsed
-    response = JSON.parse(github_response.body, symbolize_names: true)
+    JSON.parse(github.body, symbolize_names: true)[:name]
   end
- 
 end

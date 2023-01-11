@@ -7,7 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-     <%= "Github Repo Name: #{$github_api.name}"%>
+    <%= "Github Repo Name: #{RepoName.new.name_parsed}" %>
   </head>
 
   <body>

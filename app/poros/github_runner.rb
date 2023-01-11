@@ -1,13 +1,9 @@
-require 'httparty'
-require 'json'
-require 'pry'
-require_relative './repo_name.rb'
+# require 'httparty'
+# require 'json'
+# require 'pry'
+# require_relative './repo_name.rb'
 
-class Github
-  attr_reader :name
+#   name = RepoName.new
+#   repo_name = name.name_parsed
 
-  def initialize
-    @name = RepoName.new.name_parsed[:name]
-  end
-end
-
+#   require 'pry'; binding.pry
