@@ -9,7 +9,7 @@ class Commit
   end
 
   def response
-    HTTParty.get("https://api.github.com/repos/bGray88/m2_relational_rails_dir-mov/commits?&per_page=500&page=#{@page_idx}")
+    HTTParty.get("https://api.github.com/repos/bflanagan138/little-esty-shop/commits?&per_page=500&page=#{@page_idx}")
   end
 
   def parsed_count
