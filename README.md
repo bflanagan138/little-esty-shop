@@ -9,12 +9,16 @@ Using TDD and OOP, our team developed an application that utilizes ActiveRecord 
 
 ## Technologies Utilized
 Ruby 2.7.4
+
 Rails 5.2.6
 
 ## Connect With Our Team
 Brady Rohrig - https://github.com/BRohrig
+
 Brandon Gray - https://github.com/bGray88
+
 Bryan Flanagan - https://github.com/bflanagan138
+
 Sergio Azcona - https://github.com/BRohrig
 
 ## Project Phases
