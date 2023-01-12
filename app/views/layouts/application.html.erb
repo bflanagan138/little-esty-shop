@@ -20,9 +20,9 @@
     <%= "Merged Commits: #{GithubService.github_api_pr}" %>
     <div id="github_total_commits"><%= "Total Commits: #{GithubService.github_api_tc}" %></div>
 
- 
-  <% GithubService.github_user_names.each do |teammate_name|%>
+    <% GithubService.github_user_names.each do |teammate_name|%>
       <%= "Team Member: #{teammate_name.repo_name}"%> &nbsp
     <% end %>
+
   </footer>
 </html>
