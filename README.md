@@ -19,7 +19,7 @@ Brandon Gray - https://github.com/bGray88
 
 Bryan Flanagan - https://github.com/bflanagan138
 
-Sergio Azcona - https://github.com/BRohrig
+Sergio Azcona - https://github.com/Sergio-Azcona
 
 ## Project Phases
 
