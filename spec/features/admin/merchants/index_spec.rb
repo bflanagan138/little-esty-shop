@@ -167,10 +167,12 @@ RSpec.describe 'the admin merchants index' do
         it 'has generated revenue next to merchant names as links to the admin merchant\'s show page' do
           visit admin_merchants_path
 
-          expect(@merchant_2.name).to appear_before(@merchant_1.name)
-          expect(@merchant_1.name).to appear_before(@merchant_4.name)
-          expect(@merchant_4.name).to appear_before(@merchant_7.name)
-          expect(@merchant_7.name).to appear_before(@merchant_5.name)
+          within "#top_5" do
+          expect("#{@merchant_2.name}").to appear_before("#{@merchant_1.name}")
+          expect("#{@merchant_1.name}").to appear_before("#{@merchant_4.name}")
+          expect("#{@merchant_4.name}").to appear_before("#{@merchant_7.name}")
+          expect("#{@merchant_7.name}").to appear_before("#{@merchant_5.name}")
+          end
 
           expect(page).to have_content("Top 5 Revenue Earners")
           within("#admin-merchants-top-five-#{@merchant_1.id}") do

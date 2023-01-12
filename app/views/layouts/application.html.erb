@@ -7,7 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= "Github Repo Name: #{RepoName.new.name_parsed}" %>
+    
   </head>
 
   <body>
@@ -18,13 +18,13 @@
   </body>
 
   <footer>
-    <%= "Merged Commits: #{GithubService.github_api_pr}" %>
-    <div id="github_commits">
-      <%= "Brady Commits: #{GithubService.github_api_tc[:brady]}" %>
-      <%= "Brandon Commits: #{GithubService.github_api_tc[:brandon]}" %>
-      <%= "Bryan Commits: #{GithubService.github_api_tc[:bryan]}" %>
-      <%= "Sergio Commits: #{GithubService.github_api_tc[:sergio]}" %>
-    </div>
+    <%= "Github Repo Name: #{RepoName.new.name_parsed}" %>
+      <%= "Merged Commits: #{GithubService.github_api_pr}" %>
+      <div id="github_commits">
+        <%= "Brady Commits: #{GithubService.github_api_tc[:brady]}" %>
+        <%= "Brandon Commits: #{GithubService.github_api_tc[:brandon]}" %>
+        <%= "Bryan Commits: #{GithubService.github_api_tc[:bryan]}" %>
+        <%= "Sergio Commits: #{GithubService.github_api_tc[:sergio]}" %>
+      </div>
   </footer>
- 
 </html>
