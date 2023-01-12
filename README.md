@@ -1,38 +1,23 @@
 # Little Esty Shop
+https://fast-forest-60065.herokuapp.com/
 
 ## Background and Description
+"Little Esty Shop" is a group project that requires Turing students to build a fictitious e-commerce platform where merchants and admins can manage inventory and fulfill customer invoices.
 
-"Little Esty Shop" is a group project that requires students to build a fictitious e-commerce platform where merchants and admins can manage inventory and fulfill customer invoices.
+Our project uses many to many relationships to connect merchants, invoices, items, transactions and customers and allows us to access a variety of information gathering options and display them to a website. 
+Using TDD and OOP, our team developed an application that utilizes ActiveRecord to join our various databases to achieve desired outputs. In addition, API calls are utilized to reference our project's GitHub repository, and the final project was deployed to the web using Heroku.
 
-## Learning Goals
-- Practice designing a normalized database schema and defining model relationships
-- Utilize advanced routing techniques including namespacing to organize and group like functionality together.
-- Utilize advanced active record techniques to perform complex database queries
-- Practice consuming a public API while utilizing POROs as a way to apply OOP principles to organize code
+## Technologies Utilized
+Ruby 2.7.4
+Rails 5.2.6
 
-## Requirements
-- must use Rails 5.2.x
-- must use PostgreSQL
-- all code must be tested via feature tests and model tests, respectively
-- must use GitHub branching, team code reviews via GitHub comments, and github projects to track progress on user stories
-- must include a thorough README to describe the project
-- must deploy completed code to Heroku
-- Continuous Integration / Continuous Deployment is not allowed
-- Any gems added to the project must be approved by an instructor
+## Connect With Our Team
+Brady Rohrig - https://github.com/BRohrig
+Brandon Gray - https://github.com/bGray88
+Bryan Flanagan - https://github.com/bflanagan138
+Sergio Azcona - https://github.com/BRohrig
 
-## Setup
-
-This project requires Ruby 2.7.4.
-
-* Fork this repository
-* Clone your fork
-* From the command line, install gems and set up your DB:
-    * `bundle`
-    * `rails db:create`
-* Run the test suite with `bundle exec rspec`.
-* Run your development server with `rails s` to see the app in action.
-
-## Phases
+## Project Phases
 
 1. [Database Setup](./doc/db_setup.md)
 1. [User Stories](./doc/user_stories.md)
