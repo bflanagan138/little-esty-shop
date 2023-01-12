@@ -21,3 +21,4 @@ RSpec.describe 'the admin merchants index' do
     expect(page).to have_content('Jeremy Spevack')
   end
 end
+
