@@ -11,8 +11,8 @@ class UserNameSearch
 
   def github_user_names
     not_team = ["mikedao", "jamisonordway", "cjsim89", "scottalexandra", "timomitchel", "BrianZanti"]
-    
-    self.repo_info.map do |data|
+
+    self.repo_info.select do |data|
       UserName.new(data) unless not_team.include?(data[:login])
     end.flatten
   end

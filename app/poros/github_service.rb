@@ -3,6 +3,7 @@ require 'json'
 require_relative './commit.rb'
 require_relative './pull_request.rb'
 require_relative './repo_name_search.rb'
+require_relative './user_name_search.rb'
 
 
 class GithubService
